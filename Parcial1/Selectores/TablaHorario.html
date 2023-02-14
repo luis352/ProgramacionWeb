@@ -9,10 +9,27 @@
     <link rel="stylesheet" href="THorario.css" />
     <title>Horario📅</title>
   </head>
-  <style type="style/css">
-   table, th , td {
-    border: 1px solid black; 
+  <style>
+   body{
+    font-family: Arial, Helvetica, sans-serif;
    }
+   tr > th{
+    background-color: black;
+    color: aliceblue;
+   }
+   tbody > tr:nth-child(odd)
+   {
+    background-color: darkgray;
+   }
+   
+   tbody tr:hover {
+    background-color: aqua;
+   }
+
+   tbody td:active{
+    background-color: brown;
+   }
+
   </style>
   <body>
     <table  style="width: 100%">
