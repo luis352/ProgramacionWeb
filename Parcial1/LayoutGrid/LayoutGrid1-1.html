@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    #contenedor{
+        width: 100vw;
+        height: 100vh;
+        /* le da el color al fondo  */
+        background-color: #144272;
+        /* utilizar el grid */
+        display: grid;
+        /* es para las columnas que voy a usar */
+        grid-template-columns: 50% 50%;   
+
+        /* es para las filas a usar */
+        grid-template-rows: 25% 25% 25% 25%;
+        /* ES COMO SE ACOMODAN LAS CAJAS EN LA POSCION DENTRO DE LA CAJA PADRE  */
+        grid-template-areas: 'encabezado encabezado '
+                              'contenido contenido'
+                              'barralateralIzquierda    barralateralderecha'
+                              'piepagina  piepaginaderecha';
+
+                              /* MANTENER LOS HIJOS CENTRADOS */
+        justify-content: center;
+        align-content: center;
+        /* ES PARA QUE OCUPEN TODO O RELLENEN EL CUDARO QUE LES ESTE DANDO CON LOS GRID  */
+        justify-items: stretch;
+        
+    }
+   
+    /* PRPIEDADES DE LA CAJA */
+    .caja{
+
+      /* height: 100px; */
+      
+        background-color: gray;
+        text-align: center;
+        border: 1px solid black;
+
+    }
+
+    /* NOMBRAR CAJAS PARA PODER ACOMODARLAS EN EL GRID AREA  */
+ 
+    #encabezado{grid-area: encabezado;}
+    #barralateralIzquierda{grid-area: barralateralIzquierda;}
+    #contenido{grid-area: contenido;}
+    #piepagina{grid-area: piepagina;}
+    #barralateralderecha{grid-area: barralateralderecha;}
+    #piepaginaderecha{grid-area: piepaginaderecha;}
+
+ </style>
+</head>
+<body>
+    
+    <!-- CAJA PADRE ES EL CONTENEDOR  -->
+    <div id="contenedor">
+        <!-- ESTOS SON LOS HIJOS  -->
+        <div class="caja" id="encabezado">encabezado</div>
+        <div class="caja" id="barralateralIzquierda">Imagen1</div>
+        <div class="caja" id="contenido">contenido</div>
+        <div class="caja" id="piepagina">Descripcion</div>
+        <div class="caja" id="barralateralderecha">Imagen2</div>
+        <div class="caja" id="piepaginaderecha">Descripcion</div>
+        
+
+    </div>
+
+</body>
+</html>
