@@ -68,11 +68,42 @@
  .caja:hover{
 
     background-color:green  ;
-    transition-property: color;
-    transition-delay:  2s;
-    transition-timing-function:  ease-in-out;
+    transition-property: background-color;
+    transition-duration:  2s;
+    transition-timing-function:  ease-in;
+    
 
 }
+
+/* 
+ #encabezado:  {
+     transform:  skew(30deg, 30deg);
+ } */
+
+ #piePagina:hover {
+    transform: skew(30deg, 30deg);
+ }
+
+
+ #barralateral:active {
+    transform: scale(1,5);
+
+ }
+
+ #contenido {
+    animation: CambioAncho 4s linear 0s 4 normal forwards running;
+ }
+
+ @keyframes CambioAncho{
+    from {
+        width: 300px;
+
+    }
+    to
+    {
+        width: 700px;
+    }
+ }
 
 
 
