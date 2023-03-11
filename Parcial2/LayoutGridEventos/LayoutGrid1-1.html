@@ -86,7 +86,13 @@
 
         //metodo 2 
     
-     document.getElementById("barralateralIzquierda").onclick = function() {alert("Cliel en barra lateral isquerza imagen 1 ")};  
+     document.getElementById("barralateralIzquierda").onclick = function() {alert("Cliel en barra lateral isquerza imagen 1 ")
+    
+     document.getElementById("barralateralIzquierda").style.backgroundColor="yellow"; 
+
+     document.getElementById("barralateralIzquierda").classList.toggle("cajaAmarilla")
+     
+    };  
 
     //metodo 3 
     document.getElementById("contenido").addEventListener("click",clickContenido ); 
